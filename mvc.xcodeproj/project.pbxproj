@@ -7,108 +7,210 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		A8C7C5DE18F96FAB00F5C0B2 /* __init__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
-		A8C7C5DF18F96FAB00F5C0B2 /* .DS_Store */ = {isa = PBXFileReference; lastKnownFileType = file; path = .DS_Store; sourceTree = "<group>"; };
-		A8C7C5E118F96FAB00F5C0B2 /* examplecontroller.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = examplecontroller.py; sourceTree = "<group>"; };
-		A8C7C5E318F96FAB00F5C0B2 /* __init__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
-		A8C7C5E418F96FAB00F5C0B2 /* method.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = method.py; sourceTree = "<group>"; };
-		A8C7C5E518F96FAB00F5C0B2 /* statuscode.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = statuscode.py; sourceTree = "<group>"; };
-		A8C7C5EB18F972CE00F5C0B2 /* __init__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
-		A8C7C5EC18F9738800F5C0B2 /* interface */ = {isa = PBXFileReference; lastKnownFileType = text; path = interface; sourceTree = "<group>"; };
-		A8C7C5ED18F974D200F5C0B2 /* request.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = request.py; sourceTree = "<group>"; };
-		A8C7C5EE18F9760C00F5C0B2 /* response.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = response.py; sourceTree = "<group>"; };
+		A8C7C5FB18F9928400F5C0B2 /* examplecontroller.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = examplecontroller.py; sourceTree = "<group>"; };
+		A8C7C5FD18F9928400F5C0B2 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		A8C7C5FE18F9928400F5C0B2 /* method.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = method.py; sourceTree = "<group>"; };
+		A8C7C5FF18F9928400F5C0B2 /* request.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = request.py; sourceTree = "<group>"; };
+		A8C7C60018F9928400F5C0B2 /* response.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = response.py; sourceTree = "<group>"; };
+		A8C7C60118F9928400F5C0B2 /* statuscode.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = statuscode.py; sourceTree = "<group>"; };
+		A8C7C60318F9928400F5C0B2 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		A8C7C60418F9928400F5C0B2 /* interface */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = interface; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		A8C7C5D718F96F8600F5C0B2 = {
+		A8C7C5EF18F990EB00F5C0B2 = {
 			isa = PBXGroup;
 			children = (
-				A8C7C5E018F96FAB00F5C0B2 /* examples */,
-				A8C7C5E218F96FAB00F5C0B2 /* http */,
-				A8C7C5EA18F9728B00F5C0B2 /* wsgi */,
-				A8C7C5DE18F96FAB00F5C0B2 /* __init__.py */,
-				A8C7C5DF18F96FAB00F5C0B2 /* .DS_Store */,
+				A8C7C5FA18F9928400F5C0B2 /* examples */,
+				A8C7C5FC18F9928400F5C0B2 /* http */,
+				A8C7C60218F9928400F5C0B2 /* wsgi */,
 			);
 			sourceTree = "<group>";
 		};
-		A8C7C5E018F96FAB00F5C0B2 /* examples */ = {
+		A8C7C5FA18F9928400F5C0B2 /* examples */ = {
 			isa = PBXGroup;
 			children = (
-				A8C7C5E118F96FAB00F5C0B2 /* examplecontroller.py */,
+				A8C7C5FB18F9928400F5C0B2 /* examplecontroller.py */,
 			);
 			path = examples;
 			sourceTree = "<group>";
 		};
-		A8C7C5E218F96FAB00F5C0B2 /* http */ = {
+		A8C7C5FC18F9928400F5C0B2 /* http */ = {
 			isa = PBXGroup;
 			children = (
-				A8C7C5E318F96FAB00F5C0B2 /* __init__.py */,
-				A8C7C5E418F96FAB00F5C0B2 /* method.py */,
-				A8C7C5E518F96FAB00F5C0B2 /* statuscode.py */,
-				A8C7C5ED18F974D200F5C0B2 /* request.py */,
-				A8C7C5EE18F9760C00F5C0B2 /* response.py */,
+				A8C7C5FD18F9928400F5C0B2 /* __init__.py */,
+				A8C7C5FE18F9928400F5C0B2 /* method.py */,
+				A8C7C5FF18F9928400F5C0B2 /* request.py */,
+				A8C7C60018F9928400F5C0B2 /* response.py */,
+				A8C7C60118F9928400F5C0B2 /* statuscode.py */,
 			);
 			path = http;
 			sourceTree = "<group>";
 		};
-		A8C7C5EA18F9728B00F5C0B2 /* wsgi */ = {
+		A8C7C60218F9928400F5C0B2 /* wsgi */ = {
 			isa = PBXGroup;
 			children = (
-				A8C7C5EB18F972CE00F5C0B2 /* __init__.py */,
-				A8C7C5EC18F9738800F5C0B2 /* interface */,
+				A8C7C60318F9928400F5C0B2 /* __init__.py */,
+				A8C7C60418F9928400F5C0B2 /* interface */,
 			);
 			path = wsgi;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXLegacyTarget section */
+		A8C7C5F418F990EB00F5C0B2 /* mvc */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = A8C7C5F718F990EB00F5C0B2 /* Build configuration list for PBXLegacyTarget "mvc" */;
+			buildPhases = (
+			);
+			buildToolPath = /Library/Frameworks/Python.framework/Versions/3.4/bin/python3;
+			buildWorkingDirectory = "$(SOURCE_ROOT)/";
+			dependencies = (
+			);
+			name = mvc;
+			passBuildSettingsInEnvironment = 1;
+			productName = mvc;
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXProject section */
-		A8C7C5D818F96F8600F5C0B2 /* Project object */ = {
+		A8C7C5F018F990EB00F5C0B2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = mvc;
 			};
-			buildConfigurationList = A8C7C5DB18F96F8600F5C0B2 /* Build configuration list for PBXProject "mvc" */;
+			buildConfigurationList = A8C7C5F318F990EB00F5C0B2 /* Build configuration list for PBXProject "mvc" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = A8C7C5D718F96F8600F5C0B2;
+			mainGroup = A8C7C5EF18F990EB00F5C0B2;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				A8C7C5F418F990EB00F5C0B2 /* mvc */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin XCBuildConfiguration section */
-		A8C7C5DC18F96F8600F5C0B2 /* Debug */ = {
+		A8C7C5F518F990EB00F5C0B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
-		A8C7C5DD18F96F8600F5C0B2 /* Release */ = {
+		A8C7C5F618F990EB00F5C0B2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A8C7C5F818F990EB00F5C0B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A8C7C5F918F990EB00F5C0B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A8C7C5DB18F96F8600F5C0B2 /* Build configuration list for PBXProject "mvc" */ = {
+		A8C7C5F318F990EB00F5C0B2 /* Build configuration list for PBXProject "mvc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A8C7C5DC18F96F8600F5C0B2 /* Debug */,
-				A8C7C5DD18F96F8600F5C0B2 /* Release */,
+				A8C7C5F518F990EB00F5C0B2 /* Debug */,
+				A8C7C5F618F990EB00F5C0B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		A8C7C5F718F990EB00F5C0B2 /* Build configuration list for PBXLegacyTarget "mvc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8C7C5F818F990EB00F5C0B2 /* Debug */,
+				A8C7C5F918F990EB00F5C0B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A8C7C5D818F96F8600F5C0B2 /* Project object */;
+	rootObject = A8C7C5F018F990EB00F5C0B2 /* Project object */;
 }
