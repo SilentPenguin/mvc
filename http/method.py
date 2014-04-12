@@ -1,5 +1,6 @@
-from enum import Enum
+from enum import Enum, unique
 
+@unique
 class Method(Enum):
     """Various http method verbs"""
     
@@ -12,3 +13,5 @@ class Method(Enum):
     options = "OPTIONS"
     connect = "CONNECT"
     patch = "PATCH"
+
+    unrecognised = None
