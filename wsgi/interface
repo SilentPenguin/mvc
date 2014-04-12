@@ -1,0 +1,10 @@
+from mvc.http.response import Response
+from mvc.http.request import Request
+
+class interface():
+    __call__(self, environment, send_header):
+        request = Request(environment)
+        #get response here
+        response = Response()
+        send_header(response.status.value, response.headers)
+        yeild response
