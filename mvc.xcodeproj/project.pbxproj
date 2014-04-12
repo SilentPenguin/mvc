@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		A87B07E218F9A96600331074 /* querystring.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = querystring.py; sourceTree = "<group>"; };
+		A87B07E418F9B22800331074 /* url.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = url.py; sourceTree = "<group>"; };
+		A87B07E518F9B27900331074 /* scheme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = scheme; sourceTree = "<group>"; };
+		A87B07E618F9B3D400331074 /* querystring.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = querystring.py; sourceTree = "<group>"; };
 		A8C7C5FB18F9928400F5C0B2 /* examplecontroller.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = examplecontroller.py; sourceTree = "<group>"; };
 		A8C7C5FD18F9928400F5C0B2 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
 		A8C7C5FE18F9928400F5C0B2 /* method.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = method.py; sourceTree = "<group>"; };
@@ -19,12 +21,24 @@
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		A87B07E318F9B20700331074 /* url */ = {
+			isa = PBXGroup;
+			children = (
+				A87B07E618F9B3D400331074 /* querystring.py */,
+				A87B07E418F9B22800331074 /* url.py */,
+				A87B07E518F9B27900331074 /* scheme */,
+			);
+			name = url;
+			path = wsgi/url;
+			sourceTree = "<group>";
+		};
 		A8C7C5EF18F990EB00F5C0B2 = {
 			isa = PBXGroup;
 			children = (
 				A8C7C5FA18F9928400F5C0B2 /* examples */,
 				A8C7C5FC18F9928400F5C0B2 /* http */,
 				A8C7C60218F9928400F5C0B2 /* wsgi */,
+				A87B07E318F9B20700331074 /* url */,
 			);
 			sourceTree = "<group>";
 		};
@@ -44,7 +58,6 @@
 				A8C7C5FF18F9928400F5C0B2 /* request.py */,
 				A8C7C60018F9928400F5C0B2 /* response.py */,
 				A8C7C60118F9928400F5C0B2 /* statuscode.py */,
-				A87B07E218F9A96600331074 /* querystring.py */,
 			);
 			path = http;
 			sourceTree = "<group>";
