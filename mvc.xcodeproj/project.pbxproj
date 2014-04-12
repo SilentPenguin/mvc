@@ -6,11 +6,42 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXFileReference section */
+		A8C7C5DE18F96FAB00F5C0B2 /* __init__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		A8C7C5DF18F96FAB00F5C0B2 /* .DS_Store */ = {isa = PBXFileReference; lastKnownFileType = file; path = .DS_Store; sourceTree = "<group>"; };
+		A8C7C5E118F96FAB00F5C0B2 /* examplecontroller.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = examplecontroller.py; sourceTree = "<group>"; };
+		A8C7C5E318F96FAB00F5C0B2 /* __init__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		A8C7C5E418F96FAB00F5C0B2 /* method.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = method.py; sourceTree = "<group>"; };
+		A8C7C5E518F96FAB00F5C0B2 /* statuscode.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = statuscode.py; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		A8C7C5D718F96F8600F5C0B2 = {
 			isa = PBXGroup;
 			children = (
+				A8C7C5DE18F96FAB00F5C0B2 /* __init__.py */,
+				A8C7C5DF18F96FAB00F5C0B2 /* .DS_Store */,
+				A8C7C5E018F96FAB00F5C0B2 /* examples */,
+				A8C7C5E218F96FAB00F5C0B2 /* http */,
 			);
+			sourceTree = "<group>";
+		};
+		A8C7C5E018F96FAB00F5C0B2 /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				A8C7C5E118F96FAB00F5C0B2 /* examplecontroller.py */,
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		A8C7C5E218F96FAB00F5C0B2 /* http */ = {
+			isa = PBXGroup;
+			children = (
+				A8C7C5E318F96FAB00F5C0B2 /* __init__.py */,
+				A8C7C5E418F96FAB00F5C0B2 /* method.py */,
+				A8C7C5E518F96FAB00F5C0B2 /* statuscode.py */,
+			);
+			path = http;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
