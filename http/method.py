@@ -15,3 +15,6 @@ class Method(Enum):
     patch = "PATCH"
 
     unrecognised = None
+
+    __str__(self):
+        return self.value

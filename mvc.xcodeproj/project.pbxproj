@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		A87B07E218F9A96600331074 /* querystring.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = querystring.py; sourceTree = "<group>"; };
 		A8C7C5FB18F9928400F5C0B2 /* examplecontroller.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = examplecontroller.py; sourceTree = "<group>"; };
 		A8C7C5FD18F9928400F5C0B2 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
 		A8C7C5FE18F9928400F5C0B2 /* method.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = method.py; sourceTree = "<group>"; };
@@ -43,6 +44,7 @@
 				A8C7C5FF18F9928400F5C0B2 /* request.py */,
 				A8C7C60018F9928400F5C0B2 /* response.py */,
 				A8C7C60118F9928400F5C0B2 /* statuscode.py */,
+				A87B07E218F9A96600331074 /* querystring.py */,
 			);
 			path = http;
 			sourceTree = "<group>";
@@ -209,6 +211,7 @@
 				A8C7C5F918F990EB00F5C0B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

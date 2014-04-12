@@ -1,4 +1,5 @@
 from mvc.http.method import Method
+    from mvc.http.query_string import QueryString
 from urllib import quote
 
 class Request ():
@@ -45,13 +46,16 @@ class Request ():
     #make some of the present environment values more palletable
     def _pleasentaries(self, environment):
         if 'request_method' in self:
-            self.request_method = Method(self.request_method)
+            self.request_method = Method(self.request_method.upper())
         
         if 'content_length' in self:
             self.content_length = int(self.content_length)
 
         if 'server_port' in self:
             self.server_port = int(self.server_port)
+
+        if 'query_string' in self:
+            self.query_string = QueryString(self.query_string)
 
     #adds in some extra properties to save on some faff
     def _extras(self, environment):
