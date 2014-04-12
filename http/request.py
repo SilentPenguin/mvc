@@ -16,10 +16,6 @@ class Request ():
     server_name = ''
     server_port = ''
     server_protocol = ''
-    
-    path = ''
-    host = ''
-    secured = False
 
     def __init__(self, environment):
     
