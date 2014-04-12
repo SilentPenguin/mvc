@@ -1,16 +1,16 @@
-from mvc.http import Method
+from mvc.http.method import Method
 
 class Request ():
     
-    request_method = None
-    script_name = None
-    path_info = None
-    query_string = None
-    content_type = None
-    content_length = None
-    server_name = None
-    server_port = None
-    server_protocol = None
+    request_method = Method("unrecognised")
+    script_name = ""
+    path_info = ""
+    query_string = ""
+    content_type = ""
+    content_length = 0
+    server_name = ""
+    server_port = ""
+    server_protocol = ""
 
     def __init__(self, environment):
     
@@ -19,5 +19,7 @@ class Request ():
             setattr(self, name.lower(), value);
 
         #make some of the present environment values more palletable
-        self.request_method = Method(self.request_method)
-        self.content_length = int(self.content_length)
+        if "REQUEST_METHOD" in environment:
+            self.request_method = Method(self.request_method)
+        if "CONTENT_LENGTH" in environment:
+            self.content_length = int(self.content_length)
