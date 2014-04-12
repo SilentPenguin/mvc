@@ -18,7 +18,9 @@ class Request ():
     server_port = ''
     server_protocol = ''
     
-    application_path = ''
+    path = ''
+    host = ''
+    secured = False
 
     def __init__(self, environment):
     
@@ -33,7 +35,7 @@ class Request ():
     def _clone(self, environment)
         for name, value in environment.items():
             name = name.lower()
-            if name.startswith('html-'):
+            if name.startswith('http-'):
                 setattr(self.html, name[5:], value);
             else if name.startswith('wsgi.'):
                 setattr(self.wsgi, name[5:], value);
@@ -53,7 +55,7 @@ class Request ():
 
     #adds in some extra properties to save on some faff
     def _extras(self, environment):
-        self.application_path = quote(self.script_name + self.path_info, '')
+        self.path = quote(self.script_name + self.path_info, '')
         self.host = self.http_host if 'http_host' in self else self.server_name
         self.secured = self.wsgi.url_scheme in SECURE_PROTOCOLS
         self.address = self._construct_address();
@@ -63,7 +65,9 @@ class Request ():
         if self.url_scheme in DEFAULT_PORTS \
                 and self.server_port != DEFAULT_PORTS[self.url_scheme]:
             url += ':' + self.server_port
-
+        url += self.path
+        if 'query_string' in self:
+            url += '?' + self.query_string
 
     def __getitem__(self, index):
         return getattr(self,index)
