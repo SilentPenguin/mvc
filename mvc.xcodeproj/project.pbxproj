@@ -21,6 +21,7 @@
 		A87B07FA18FAEDFE00331074 /* resolve.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = resolve.py; sourceTree = "<group>"; };
 		A87B07FB18FB0BEF00331074 /* test.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = test.py; sourceTree = "<group>"; };
 		A87B07FC18FB17EA00331074 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		A8967A8A18FC020C00827CBA /* test.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = test.py; sourceTree = "<group>"; };
 		A8C7C5FB18F9928400F5C0B2 /* example.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = example.py; sourceTree = "<group>"; };
 		A8C7C5FD18F9928400F5C0B2 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
 		A8C7C5FE18F9928400F5C0B2 /* method.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = method.py; sourceTree = "<group>"; };
@@ -111,6 +112,7 @@
 				A8C7C5FF18F9928400F5C0B2 /* request.py */,
 				A8C7C60018F9928400F5C0B2 /* response.py */,
 				A8C7C60118F9928400F5C0B2 /* statuscode.py */,
+				A8967A8A18FC020C00827CBA /* test.py */,
 			);
 			path = http;
 			sourceTree = "<group>";

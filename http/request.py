@@ -1,6 +1,6 @@
 from http.method import Method
 from url.url import Url
-from urllib import quote
+from urllib import parse
 
 class Request:
     def __init__(self, environment):
@@ -32,12 +32,12 @@ class Request:
 
     #copy our environment across to the request as properties
     #it would have been nice if the wsgi spec required html with a dot
-    def _clone(self)
+    def _clone(self):
         for name, value in self._environment.items():
             name = name.lower()
             if name.startswith('http-'):
                 setattr(self.html, name[5:], value);
-            else if name.startswith('wsgi.'):
+            elif name.startswith('wsgi.'):
                 setattr(self.wsgi, name[5:], value);
             else:
                 setattr(self, name, value);
@@ -55,7 +55,7 @@ class Request:
 
     #adds in some extra properties to save on some faff
     def _extras(self):
-        path = quote(self.script_name + self.path_info, '')
+        path = parse.quote(self.script_name + self.path_info, '')
         host = self.http_host if 'http_host' in self else self.server_name
         self.url = Url(host, path, query_string, self.url_scheme, self.server_port)    
 

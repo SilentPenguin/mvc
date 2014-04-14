@@ -4,4 +4,4 @@ class QueryString(dict):
         super().__init__(parse.parse_qs(query_string))
 
     def __str__(self):
-        return '&'.join('{}={}'.format(k,v) for (k,vs) in sorted(super().items()) for v in vs)
+        return '&'.join('{}={}'.format(k,v) for (k,vs) in sorted(super().items()) for v in sorted(vs))

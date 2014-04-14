@@ -16,5 +16,5 @@ class Method(Enum):
 
     unrecognised = None
 
-    __str__(self):
+    def __str__(self):
         return self.value
