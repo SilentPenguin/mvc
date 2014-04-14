@@ -14,15 +14,16 @@ class Request:
     
         self.wsgi = {}
         self.html = {}
-        self.request_method = Method('unrecognised')
+        self.request_method = Method['unrecognised']
         self.script_name = ''
         self.path_info = ''
-        self.query_string = ''
-        self.content_type = ''
-        self.content_length = 0
-        self.server_name = ''
-        self.server_port = ''
-        self.server_protocol = ''
+        self.query_string = None
+        self.content_type = None
+        self.content_length = None
+        self.server_port = 80
+        self.server_name = None
+        self.server_protocol = None
+        self.url_scheme = 'http'
     
         self._environment = environment
     
@@ -36,31 +37,31 @@ class Request:
         for name, value in self._environment.items():
             name = name.lower()
             if name.startswith('http-'):
-                setattr(self.html, name[5:], value);
+                setattr(self.html, name[5:], value)
             elif name.startswith('wsgi.'):
-                setattr(self.wsgi, name[5:], value);
+                setattr(self.wsgi, name[5:], value)
             else:
-                setattr(self, name, value);
+                setattr(self, name, value)
 
     #make some of the present environment values more palletable
     def _pleasentaries(self):
-        if 'request_method' in self:
-            self.request_method = Method(self.request_method.upper())
+        if 'request_method' in self and self.request_method is not None:
+            self.request_method = Method(self.request_method)
         
-        if 'content_length' in self:
+        if 'content_length' in self and self.content_length is not None:
             self.content_length = int(self.content_length)
 
-        if 'server_port' in self:
+        if 'server_port' in self and self.server_port is not None:
             self.server_port = int(self.server_port)
 
     #adds in some extra properties to save on some faff
     def _extras(self):
         path = parse.quote(self.script_name + self.path_info, '')
         host = self.http_host if 'http_host' in self else self.server_name
-        self.url = Url(host, path, query_string, self.url_scheme, self.server_port)    
+        self.url = Url(host, path, self.query_string, self.url_scheme, self.server_port)
 
     def __getitem__(self, index):
-        return getattr(self,index)
+        return getattr(self, index)
 
     def __contains__(self, index):
-        return index in self.environment or hasattr(self, index)
+        return hasattr(self, index)
