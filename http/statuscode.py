@@ -98,7 +98,7 @@ class StatusCode(Enum):
     loop_detected = 508 #RFC 5842
     _bandwidth_limit_exceeded = 509 #Apache
     not_extended = 510 #RFC 2774
-    network_authentication_required #RFC 6585
+    network_authentication_required = 511 #RFC 6585
     _origin_error = 520 #cloudflare
     _web_server_is_down = 521 #cloudflare
     _connection_timed_out = 522 #cloudflare

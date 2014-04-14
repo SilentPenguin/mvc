@@ -1,7 +1,7 @@
-from unittest import TestCase
-from http.request import Request
+import unittest
+from .request import Request
 
-class RequestTestFunctions(TestCase):
+class RequestTestFunctions(unittest.TestCase):
     def test_empty_request(self):
         request = Request({})
 

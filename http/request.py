@@ -1,5 +1,5 @@
-from http.method import Method
-from url.url import Url
+from .method import Method
+from ..url.url import Url
 from urllib import parse
 
 class Request:

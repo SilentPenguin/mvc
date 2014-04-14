@@ -1,5 +1,5 @@
-from url.scheme import Scheme
-from url.querystring import QueryString
+from mvc.url.scheme import Scheme
+from mvc.url.querystring import QueryString
 
 class Url:
     def __init__(self, host, path, query = None, scheme = 'http', port = None):

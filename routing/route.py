@@ -1,5 +1,4 @@
 import re
-from routing.resolve import Resolve
 
 class Route:
     '''
@@ -14,8 +13,9 @@ class Route:
             the target children
         target(list of callables) - child callables to resolve
         default(dict) - currently unused
+        raw (bool) - uses the regex raw, rather than appending nicities
     '''
-    def __init__(self, target = None, regex = None, default = None):
+    def __init__(self, target = None, regex = None, default = None, raw = False):
         '''
         Note:
             use this without any arguments if you intend to use += at some point
@@ -28,13 +28,14 @@ class Route:
             default(dict) - currently unused
         '''
         self.regex = regex
+        self.raw = raw
         self.target = []
         self.default = default
-        if target is not None:
+        if target:
             self += target
 
-    def __call__(self, test, resolve = None):
-        return self.resolve(test, resolve)
+    def __call__(self, test, _resolve = None):
+        return self.resolve(test, _resolve)
     
     def resolve(self, test, _resolve = None):
         '''
@@ -45,20 +46,28 @@ class Route:
         Args:
             test (str): string to test
         '''
-        #if resolve is None:
-        #    resolve = Resolve()
-        matches = re.search(self.regex, test) if self.regex is not None else True
-        if matches is not None and len(self.target):
+        matches = True
+        if self.regex:
+            matches = re.search(('^' if not self.raw else '') + self.regex, test)
+        if matches:
             childtest = test
-            if self.regex is not None:
+            
+            if self.regex:
                 childtest = re.sub(self.regex, '', test, count = 1)
+                if _resolve is None:
+                    _resolve = {}
+                _resolve.update(matches.groupdict())
+        
+            if self.default:
+                _resolve.update(self.default)
+            
             for item in self.target:
                 if issubclass(item.__class__, self.__class__):
                     result = item(childtest, _resolve)
-                    if result is not None:
+                    if result:
                         return result
                 else:
-                    return item
+                    return (item, _resolve)
     
     __call__.__doc__ = resolve.__doc__
 

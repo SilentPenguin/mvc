@@ -1,5 +1,6 @@
-from http.response import Response
-from http.statuscode import StatusCode
+from mvc.http.response import Response
+from mvc.http.statuscode import StatusCode
+
 class Controller:
     '''
     The base class for useful controller functions

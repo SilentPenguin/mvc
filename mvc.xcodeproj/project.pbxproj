@@ -18,10 +18,13 @@
 		A87B07F618FABEF200331074 /* url.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = url.py; sourceTree = "<group>"; };
 		A87B07F818FAC82800331074 /* test.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = test.py; sourceTree = "<group>"; };
 		A87B07F918FACC5000331074 /* __init__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
-		A87B07FA18FAEDFE00331074 /* resolve.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = resolve.py; sourceTree = "<group>"; };
 		A87B07FB18FB0BEF00331074 /* test.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = test.py; sourceTree = "<group>"; };
 		A87B07FC18FB17EA00331074 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
 		A8967A8A18FC020C00827CBA /* test.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = test.py; sourceTree = "<group>"; };
+		A8967A8B18FC36BF00827CBA /* example.pyhtml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = example.pyhtml; sourceTree = "<group>"; };
+		A8967A9F18FC5DFD00827CBA /* template.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = template.py; sourceTree = "<group>"; };
+		A8967AA018FC5E0D00827CBA /* test.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = test.py; sourceTree = "<group>"; };
+		A8967AA118FC5F3200827CBA /* test */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test; sourceTree = "<group>"; };
 		A8C7C5FB18F9928400F5C0B2 /* example.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = example.py; sourceTree = "<group>"; };
 		A8C7C5FD18F9928400F5C0B2 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
 		A8C7C5FE18F9928400F5C0B2 /* method.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = method.py; sourceTree = "<group>"; };
@@ -37,7 +40,6 @@
 			isa = PBXGroup;
 			children = (
 				A87B07EC18FABA3C00331074 /* __init__.py */,
-				A87B07FA18FAEDFE00331074 /* resolve.py */,
 				A87B07F118FABBF500331074 /* route.py */,
 				A87B07F818FAC82800331074 /* test.py */,
 			);
@@ -65,6 +67,9 @@
 			isa = PBXGroup;
 			children = (
 				A87B07F018FABB0800331074 /* __init__.py */,
+				A8967A8B18FC36BF00827CBA /* example.pyhtml */,
+				A8967A9F18FC5DFD00827CBA /* template.py */,
+				A8967AA018FC5E0D00827CBA /* test.py */,
 			);
 			path = templating;
 			sourceTree = "<group>";
@@ -85,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				A87B07F918FACC5000331074 /* __init__.py */,
+				A8967AA118FC5F3200827CBA /* test */,
 				A87B07E918FAB9A400331074 /* controller */,
 				A8C7C5FA18F9928400F5C0B2 /* examples */,
 				A8C7C5FC18F9928400F5C0B2 /* http */,

@@ -1,7 +1,7 @@
-from unittest import TestCase
-from url.url import Url
+import unittest
+from .url import Url
 
-class urlTestFunctions(TestCase):
+class urlTestFunctions(unittest.TestCase):
     
     def setUp(self):
         self.host = 'example.com'

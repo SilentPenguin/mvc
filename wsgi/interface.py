@@ -1,5 +1,5 @@
-from http.response import Response
-from http.request import Request
+from mvc.http.response import Response
+from mvc.http.request import Request
 
 class interface:
     def __init__(self, routemap):
@@ -10,10 +10,10 @@ class interface:
 
         response = Response()
 
-        controller = self.routemap(request.url)
+        (controller, context) = self.routemap(request.url)
         
-        if callable(controller):
-            response = controller()
+        if controller:
+            response = controller(**context)
 
         send_header(response.status.value, response.headers)
         yeild response
