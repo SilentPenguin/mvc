@@ -17,16 +17,16 @@ converted to str, expression or raw text, in that order.
 
 That sounds disgusting, "why has this horror been created?" I hear you cry.
 Simple, so that this is valid template:
-# Example.pyhtml
-<html>
-     <head>
-        <title> some title
-     <body>
-         if model.value is not None:
-             <div>
-                model.value
-         else:
-             <div> nothing?
+    # Example.pyhtml
+    <html>
+        <head>
+            <title> some title
+        <body>
+            if model.value is not None:
+                <div>
+                    model.value
+            else:
+                <div> nothing?
 
 It has taken me a couple of hours to get used to looking at templates without weird characters like @, %, $ or {}, and
 implicitly closing html tags hasn't helped that.
