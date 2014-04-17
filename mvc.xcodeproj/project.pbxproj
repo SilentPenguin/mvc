@@ -25,6 +25,7 @@
 		A8967A9F18FC5DFD00827CBA /* template.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = template.py; sourceTree = "<group>"; };
 		A8967AA018FC5E0D00827CBA /* test.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = test.py; sourceTree = "<group>"; };
 		A8967AA118FC5F3200827CBA /* test */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test; sourceTree = "<group>"; };
+		A8B7085C18FFF255007FF3A1 /* example.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = example.html; sourceTree = "<group>"; };
 		A8C7C5FB18F9928400F5C0B2 /* example.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = example.py; sourceTree = "<group>"; };
 		A8C7C5FD18F9928400F5C0B2 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
 		A8C7C5FE18F9928400F5C0B2 /* method.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = method.py; sourceTree = "<group>"; };
@@ -68,6 +69,7 @@
 			children = (
 				A87B07F018FABB0800331074 /* __init__.py */,
 				A8967A8B18FC36BF00827CBA /* example.pyhtml */,
+				A8B7085C18FFF255007FF3A1 /* example.html */,
 				A8967A9F18FC5DFD00827CBA /* template.py */,
 				A8967AA018FC5E0D00827CBA /* test.py */,
 			);

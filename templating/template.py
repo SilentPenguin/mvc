@@ -1,22 +1,23 @@
 import re
 import keyword
-from os import path
+import os.path
 import importlib.machinery
 
 class TemplateEngine:
-    def __init__(self, template_path):
+    def __init__(self, template_path, _override_compile_cache = False):
         self.template_path = template_path
         self.file_name = self.template_path.rsplit('.', 1)[0] + '.py'
         self.base = TemplateNode()
         self.base.level = -1
         self.tab_size = 4
-        if self._check_to_compile():
+        if self._check_to_compile() or _override_compile_cache:
             self.code = self._compile_template()
             self._write_template_code()
     
     def _check_to_compile(self):
         try:
-            return path.getmtime(self.template_path) > path.getmtime(self.file_name)
+            return os.path.getmtime(self.template_path) \
+                > os.path.getmtime(self.file_name)
         except:
             return True
     
@@ -35,7 +36,7 @@ class TemplateEngine:
             f.writelines(code)
             f.write('    return _result')
     
-    def __call__(self, view, model):
+    def __call__(self, model):
         loader = importlib.machinery.SourceFileLoader("module.name", self.file_name)
         view = loader.load_module("module.name")
         return view.view_code(view, model)
@@ -49,6 +50,7 @@ class TemplateNode:
         self.children = []
     
     def compile_node(self, _code = '', _code_indent = 0, _html_indent = 0):
+        '''here be dragons'''
     
         tag = ''
     
@@ -77,7 +79,7 @@ class TemplateNode:
             _code = child.compile_node(_code, _code_indent, _html_indent)
         
         if tag:
-            _code  += ' ' * _code_indent * 4 + '_result += "' + ' ' * (_html_indent - 1) * 4 + '</' + tag + '> \\n"\n'
+            _code  += ' ' * _code_indent * 4 + '_result += "' + ' ' * (_html_indent - 1) * 4 + '</' + tag + '>\\n"\n'
             
         return _code
 
