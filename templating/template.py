@@ -4,13 +4,19 @@ import os.path
 import importlib.machinery
 
 class TemplateEngine:
-    def __init__(self, template_path, _override_compile_cache = False):
+    FORBIDDEN_CLOSING_TAGS = ('IMG', 'INPUT', 'BR', 'HR', 'FRAME', 'AREA',
+        'BASE', 'BASEFONT', 'COL', 'ISINDEX', 'LINK', 'META', 'PARAM')
+        
+    def __init__(self, template_path, forbidden_tags = FORBIDDEN_CLOSING_TAGS,
+            override_compile_cache = False):
+        self.forbidden_tags = forbidden_tags
         self.template_path = template_path
         self.file_name = self.template_path.rsplit('.', 1)[0] + '.py'
-        self.base = TemplateNode()
+        self.base = TemplateNode(forbidden_tags = self.forbidden_tags)
         self.base.level = -1
         self.tab_size = 4
-        if self._check_to_compile() or _override_compile_cache:
+        
+        if self._check_to_compile() or override_compile_cache:
             self.code = self._compile_template()
             self._write_template_code()
     
@@ -25,7 +31,8 @@ class TemplateEngine:
         with open(self.template_path, 'r') as f:
             for line in f.readlines():
                 if line:
-                    node = TemplateNode(line, self.tab_size)
+                    node = TemplateNode(line, self.tab_size,
+                        forbidden_tags = self.forbidden_tags)
                     self.base += node
         return self.base.compile_node()
 
@@ -43,12 +50,13 @@ class TemplateEngine:
         return template.view_code(view, model)
 
 class TemplateNode:
-    def __init__(self, text = '', tab_size = 4):
+    def __init__(self, text = '', tab_size = 4, forbidden_tags = ()):
         whitespace = re.match(r"\s*", text).group().expandtabs(tab_size)
         self.level = int(whitespace.count(' ') / tab_size)
         self.body = text.strip().split('#')[0]
         self.words = self.body.split()
         self.children = []
+        self.forbidden_tags = forbidden_tags
     
     def compile_node(self, _code = '', _code_indent = 0, _html_indent = 0):
         '''here be dragons'''
@@ -79,7 +87,7 @@ class TemplateNode:
         for child in self.children:
             _code = child.compile_node(_code, _code_indent, _html_indent)
         
-        if tag:
+        if tag and tag.upper() not in self.forbidden_tags:
             _code  += ' ' * _code_indent * 4 + '_result += "' + ' ' * (_html_indent - 1) * 4 + '</' + tag + '>\\n"\n'
             
         return _code
