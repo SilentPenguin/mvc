@@ -1,9 +1,9 @@
-@model(MyModel) <!- same as @assert isinstance(model, MyModel)-->
-
 <html>
-    <title> some title
-<body>
-    @if self.value is not None:
-        <div> @self.value
-    else:
-        <div> nothing?
+     <head>
+        <title> some title
+     <body>
+         if model.value is not None:
+             <div>
+                model.value
+         else:
+             <div> nothing?
