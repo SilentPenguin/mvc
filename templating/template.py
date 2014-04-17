@@ -71,7 +71,7 @@ class TemplateNode:
                     _code_indent += 1 if self.body.endswith(':') else 0
                 except:
                     _code += ' ' * _code_indent * 4 + '_result += "' + ' ' * _html_indent * 4 + self.body + '\\n"\n'
-                    tag_match = re.match('<([A-Za-z][A-Za-z0-9]*)>', self.body)
+                    tag_match = re.match('<([A-Za-z][A-Za-z0-9]*)[^\/]*?>', self.body)
                     if tag_match:
                         tag = tag_match.group(1)
                     _html_indent += 1
