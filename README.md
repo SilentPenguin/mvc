@@ -34,7 +34,7 @@ implicitly closing html tags hasn't helped that.
 
 This does have one repercussion, anything interpreted as raw text must be on a seperate line to what appears as a str. 
 After using the template language for a bit, this isn't as bad as it sounds, as it forces you to keep anything you're
-assigning/printing seperate, but I will consider modifying this so that lines at the same level without blank line 
+assigning/printing seperate, but I will consider modifying this so that lines at the same level without a blank line 
 between them are compressed into one line.
 
 rendering templates
