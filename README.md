@@ -45,9 +45,20 @@ between them are compressed into one line.
 Rendering Templates
 -------------------
 
-There are several ways you can render templates. the easiest way being to use the Controller class, and 
-view(self, model = None, template='') method, passing your template and view model as a parameter, this method will 
-then ensure your template is compiled (if it needs compiling) and it's output is placed in a response.
+There are several ways you can render templates. the easiest way being to use the Controller class, and using its
+
+    view(self, model, "./path/to/template.pyhtml")
+
+method, passing your template and view model as a parameter, this method will then ensure your template is compiled 
+(if it needs compiling) and it's output is placed in a response.
+
+you can seperate out mvc.templating.template.py entirely though since it has no dependancies on other parts of the system
+and use
+
+    TemplateEngine("./path/to/template.pyhtml")
+    html = template(model)
+    
+to compile and output the raw html.
 
 Routing
 =======
