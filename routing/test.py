@@ -21,6 +21,12 @@ class RoutingTestFunctions(unittest.TestCase):
         self.assertEqual(self.url, route.regex)
         self.assertEqual(self.action, route.target[-1])
     
+    def test_route_empty(self):
+        routing = Route()
+        routing += Route('', self.action)
+        (returned_action, context) = routing('')
+        self.assertEqual(self.action, returned_action)
+    
     def test_route_match(self):
         route = Route(self.url, self.action)
         (returned_action, context) = route(self.url)

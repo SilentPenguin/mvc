@@ -9,6 +9,7 @@ class Response:
     def __init__(self, status = StatusCode.not_found, body = ''):
         self.status = status
         self.body = body
+        self.headers = []
 
-    def __next__(self):
-        return self.body
+    def __iter__(self):
+        return iter([self.body.encode("utf-8")])

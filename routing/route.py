@@ -105,3 +105,5 @@ class Route:
         return self
     def __isub__(self, other):
         raise NotImplementedError
+
+route_map = Route()

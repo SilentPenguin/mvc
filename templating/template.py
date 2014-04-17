@@ -38,8 +38,9 @@ class TemplateEngine:
     
     def __call__(self, model):
         loader = importlib.machinery.SourceFileLoader("module.name", self.file_name)
-        view = loader.load_module("module.name")
-        return view.view_code(view, model)
+        view = None
+        template = loader.load_module("module.name")
+        return template.view_code(view, model)
 
 class TemplateNode:
     def __init__(self, text = '', tab_size = 4):
