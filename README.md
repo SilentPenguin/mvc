@@ -1,7 +1,7 @@
 mvc
 ===
 
-a simple mvc implementation
+a simple mvc implementation written in and for python3.4
 
 bugs? this is likely to be rife with them. There's doubtlessly performance issues which need ironing out and encoding
 issues. The wsgi interface implementation is rudementory at best.
