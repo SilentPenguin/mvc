@@ -17,6 +17,7 @@ converted to str, expression or raw text, in that order.
 
 That sounds disgusting, "why has this horror been created?" I hear you cry.
 Simple, so that this is valid template:
+
     # Example.pyhtml
     <html>
         <head>
