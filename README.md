@@ -2,9 +2,13 @@ mvc
 ===
 
 a simple mvc implementation
+
 bugs? this is likely to be rife with them. There's doubtlessly performance issues which need ironing out and encoding
-issues. The wsgi interface implementation is 
+issues. The wsgi interface implementation is rudementory at best.
+
 This module currently has two main aspects, templating, and routing
+
+Changes will come later in the form of model binding, configuration and better module structuring
 
 Templating
 ==========
