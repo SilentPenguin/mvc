@@ -7,7 +7,7 @@ class Model:
 class TemplateTestFunctions(unittest.TestCase):
     def test_template_engine(self):
         template = TemplateEngine('./templating/example.pyhtml',
-                _override_compile_cache = True)
+                override_compile_cache = True)
         code = template(Model)
         with open('./templating/example.html', 'r') as f:
             example_code = f.read()
