@@ -29,7 +29,7 @@
 		A8B7085F190023FA007FF3A1 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A8B7086019002413007FF3A1 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		A8B70861190099EE007FF3A1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		A8B7086319013F11007FF3A1 /* settings.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = settings.py; sourceTree = "<group>"; };
+		A8B708671902C0AF007FF3A1 /* application.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = application.py; sourceTree = "<group>"; };
 		A8C7C5FB18F9928400F5C0B2 /* example.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = example.py; sourceTree = "<group>"; };
 		A8C7C5FD18F9928400F5C0B2 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
 		A8C7C5FE18F9928400F5C0B2 /* method.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = method.py; sourceTree = "<group>"; };
@@ -92,12 +92,12 @@
 			path = url;
 			sourceTree = "<group>";
 		};
-		A8B7086219013EF8007FF3A1 /* settings */ = {
+		A8B708641902C0AF007FF3A1 /* application */ = {
 			isa = PBXGroup;
 			children = (
-				A8B7086319013F11007FF3A1 /* settings.py */,
+				A8B708671902C0AF007FF3A1 /* application.py */,
 			);
-			path = settings;
+			path = application;
 			sourceTree = "<group>";
 		};
 		A8C7C5EF18F990EB00F5C0B2 = {
@@ -113,7 +113,7 @@
 				A8C7C5FC18F9928400F5C0B2 /* http */,
 				A87B07ED18FABA7900331074 /* modelbinding */,
 				A87B07E718FAB77100331074 /* routing */,
-				A8B7086219013EF8007FF3A1 /* settings */,
+				A8B708641902C0AF007FF3A1 /* application */,
 				A87B07EF18FABB0800331074 /* templating */,
 				A87B07F318FABEF200331074 /* url */,
 				A8C7C60218F9928400F5C0B2 /* wsgi */,

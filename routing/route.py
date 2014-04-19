@@ -93,7 +93,7 @@ class Route:
     def __isub__(self, other):
         raise NotImplementedError
 
-from ..settings import settings
+from ..application.application import Application
 def route(target, regex, default = None):
     '''
     Decorator which handles adding routes. Just stick these on your callables
@@ -103,7 +103,7 @@ def route(target, regex, default = None):
         same as Route,
     '''
     
-    settings.route_map += Route(regex, target, default)
+    Application.route_map += Route(regex, target, default)
 
     return f
         
