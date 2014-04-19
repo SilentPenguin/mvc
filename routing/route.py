@@ -1,19 +1,6 @@
 import re
 from itertools import takewhile
 
-def route(target, regex, default = None):
-    '''
-    Decorator which handles adding routes. Just stick these on your callables
-    and the route_table will be populated for you.
-    
-    Args:
-        same as Route,
-    '''
-    
-    route_map += Route(regex, target, default)
-
-    return f
-
 class Route:
     '''
     The Route class is a radix tree, which will return a specific value based on
@@ -106,4 +93,17 @@ class Route:
     def __isub__(self, other):
         raise NotImplementedError
 
-route_map = Route()
+from ..settings import settings
+def route(target, regex, default = None):
+    '''
+    Decorator which handles adding routes. Just stick these on your callables
+    and the route_table will be populated for you.
+    
+    Args:
+        same as Route,
+    '''
+    
+    settings.route_map += Route(regex, target, default)
+
+    return f
+        
