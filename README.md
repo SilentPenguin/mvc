@@ -13,11 +13,10 @@ Changes will come later in the form of model binding, configuration and better m
 Templating
 ==========
 This is both the module's star of the show, and it's downfall. The templating structure is very similar to python itself.
-The advantage of this is that it's very short code, because it directly uses compile(). The disadvantage is that it is 
-both especially ugly to look at and is whitespace varient, because python itself is.
+The advantage of this is that it's very short code, because it directly uses compile(). The disadvantage is that the implementation is especially ugly to look at and the template code is whitespace varient, because python itself is.
 
-So, how does it work, simply, the templating engine encounters a line in your template and decides if it should be
-converted to str, expression or raw text, in that order.
+So, how does that all work? Simply, the templating engine encounters a line in your template and decides if it should be
+converted to str, expression or raw text, in that order. So if you're expecting a line to be python or an inserted string, and it's not, it's likely because there's a syntax error on that particular line.
 
 That sounds disgusting, "why has this horror been created?" I hear you cry.
 Simple, so that this is a valid template:
@@ -37,10 +36,10 @@ It has taken me a couple of hours to get used to looking at templates without we
 The implicitly closed html tags hasn't helped that.
 
 This does have one repercussion, once a line is interpreted as something, part of the line can't be interpreted 
-as something else, so to insert a model value into body of text, that code value needs to appear on a seperate line.
+as something else, so to insert a model value into a body of text that statement needs to appear on a seperate line.
 After using the template language for a bit, this isn't as bad as it sounds, as it forces you to keep anything you're
-assigning/printing seperate, but I will consider modifying this so that lines at the same level without a blank line 
-between them are compressed into one line.
+assigning/printing seperate, but I will likely be modifying this so that lines at the same level without a blank line 
+or html tag between them are compressed into one line.
 
 Rendering Templates
 -------------------
