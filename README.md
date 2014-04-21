@@ -136,12 +136,12 @@ Below is an example Model class:
     class MyModel(Model):
         my_field = Field(validate = '^\w+$')
         second_field = Field(validate = lambda v: bool(v))
-        
-similarly to Field, Model has a valid property which returns True or False if the fields (and models) inside your model are invalid.
 
 
 You'll probably be able to see that this model, named MyModel, has two Fields named my_field and second_field. More specifically, my_field only allows word characters, while second_field checks for non-false values. Obviously this is just a basic example to get the brain gears going.
+        
+As with Field, Model has a valid property which evaluates True only if all the fields (and models) inside your model are valid.
 
-It's constructor takes a request, so you can pass the request context into the model and the model will be automatically populated for you. Once you've defined your model, you will want to use it, which you'd do simply by calling
+It's constructor takes a request, so you can pass the request context into the model and the model will be automatically populated for you. Once you've defined your model, you will want to use it, which you'd do simply by calling:
 
     model = MyModel(request)
