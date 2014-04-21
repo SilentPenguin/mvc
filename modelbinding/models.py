@@ -11,7 +11,7 @@ class Form(dict):
             if form_data and request.query_string:
                 form_data = '&'.join((form_data, request.query_string))
             elif request.query_string:
-                form_data = request.query_string
+                form_data = request.query_string    
         super().__init__(parse.parse_qs(form_data))
     def __getattr__(self, name):
         return super().__getitem__(name)
@@ -74,12 +74,13 @@ class Model:
         return hasattr(self, index)
 
 class Field:
-    def __init__(self, default = None, validate = None, minimum = 0, maximum = 1):
+    def __init__(self, default = '', validate = None, minimum = 0, maximum = 1):
         self.valid = False
         self.validate = validate
         self.minimum = minimum
         self.maximum = maximum
-        self.value = default
+        self.value = [default]
+        self.valid = True
 
     def __call__(self):
         return self.value
@@ -90,12 +91,10 @@ class Field:
 
     @property
     def value(self):
-        return self._value
+        return self._value[0] if self.maximum is 1 else self._value
 
     @value.setter
     def value(self, value):
-        if value is None:
-            value = []
         self._value = value
         self.valid = self.minimum <= len(value) <= self.maximum
         for item in value:
