@@ -10,8 +10,9 @@ class Interface:
         result = self.route_map(request.url.path)
         print(request.url.path, result)
         if result is not None:
-            (controller, context) = result
-            if controller:
-                response = controller(Controller(), **context)
+            (action, context) = result
+            if action:
+                controller = Controller(request)
+                response = action(controller, **context)
         send_header(str(response.status.value) + ' ' + response.status.name, response.headers)
         return response

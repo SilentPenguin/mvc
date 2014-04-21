@@ -30,6 +30,9 @@
 		A8B7086019002413007FF3A1 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		A8B70861190099EE007FF3A1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		A8B708671902C0AF007FF3A1 /* application.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = application.py; sourceTree = "<group>"; };
+		A8B7086A190417C1007FF3A1 /* models.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = models.py; sourceTree = "<group>"; };
+		A8B7086B19052859007FF3A1 /* test.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = test.py; sourceTree = "<group>"; };
+		A8B7086C19052F06007FF3A1 /* testserver.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = testserver.py; sourceTree = "<group>"; };
 		A8C7C5FB18F9928400F5C0B2 /* example.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = example.py; sourceTree = "<group>"; };
 		A8C7C5FD18F9928400F5C0B2 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
 		A8C7C5FE18F9928400F5C0B2 /* method.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = method.py; sourceTree = "<group>"; };
@@ -64,6 +67,8 @@
 			isa = PBXGroup;
 			children = (
 				A87B07EE18FABA7900331074 /* __init__.py */,
+				A8B7086A190417C1007FF3A1 /* models.py */,
+				A8B7086B19052859007FF3A1 /* test.py */,
 			);
 			path = modelbinding;
 			sourceTree = "<group>";
@@ -96,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				A8B708671902C0AF007FF3A1 /* application.py */,
+				A8B7086C19052F06007FF3A1 /* testserver.py */,
 			);
 			path = application;
 			sourceTree = "<group>";
@@ -108,12 +114,12 @@
 				A8B70861190099EE007FF3A1 /* README.md */,
 				A87B07F918FACC5000331074 /* __init__.py */,
 				A8967AA118FC5F3200827CBA /* test */,
+				A8B708641902C0AF007FF3A1 /* application */,
 				A87B07E918FAB9A400331074 /* controller */,
 				A8C7C5FA18F9928400F5C0B2 /* examples */,
 				A8C7C5FC18F9928400F5C0B2 /* http */,
 				A87B07ED18FABA7900331074 /* modelbinding */,
 				A87B07E718FAB77100331074 /* routing */,
-				A8B708641902C0AF007FF3A1 /* application */,
 				A87B07EF18FABB0800331074 /* templating */,
 				A87B07F318FABEF200331074 /* url */,
 				A8C7C60218F9928400F5C0B2 /* wsgi */,

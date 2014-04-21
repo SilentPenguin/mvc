@@ -1,5 +1,5 @@
 import unittest
-from .request import Request
+from mvc.http.request import Request
 
 class RequestTestFunctions(unittest.TestCase):
     def test_empty_request(self):

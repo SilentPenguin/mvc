@@ -1,5 +1,5 @@
 import unittest
-from .template import TemplateEngine
+from templating.template import TemplateEngine
 
 class Model:
     value = None

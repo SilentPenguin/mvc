@@ -93,7 +93,7 @@ class Route:
     def __isub__(self, other):
         raise NotImplementedError
 
-from ..application.application import Application
+from mvc.application.application import Application
 def route(target, regex, default = None):
     '''
     Decorator which handles adding routes. Just stick these on your callables

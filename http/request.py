@@ -1,10 +1,10 @@
 from .method import Method
-from ..url.url import Url
-from ..url.scheme import Scheme
+from mvc.url.url import Url
+from mvc.url.scheme import Scheme
 from urllib import parse
 
 class Request:
-    def __init__(self, environment):
+    def __init__(self, environment = None):
         
         '''
         Attributes:
@@ -27,10 +27,10 @@ class Request:
         self.url_scheme = 'http'
     
         self._environment = environment
-    
-        self._clone()
-        self._pleasentaries()
-        self._extras()
+        if self._environment is not None:
+            self._clone()
+            self._pleasentaries()
+            self._extras()
 
     #copy our environment across to the request as properties
     #it would have been nice if the wsgi spec required html with a dot
@@ -54,6 +54,11 @@ class Request:
                 self.content_length = int(self.content_length)
             except:
                 self.content_length = 0
+                
+        if 'input' in self.wsgi and self.content_length:
+            self.body = self.wsgi['input'].read(self.content_length)
+        else:
+            self.body = ''
 
         if 'server_port' in self and self.server_port is not None:
             try:

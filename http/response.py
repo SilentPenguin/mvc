@@ -1,4 +1,4 @@
-from .statuscode import StatusCode
+from mvc.http.statuscode import StatusCode
 
 class Response:
     

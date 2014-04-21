@@ -1,12 +1,13 @@
-from ..http.response import Response
-from ..http.statuscode import StatusCode
-from ..templating.template import TemplateEngine
+from mvc.http.response import Response
+from mvc.http.statuscode import StatusCode
+from mvc.templating.template import TemplateEngine
 
 class Controller:
     '''
     The base class for useful controller functions
     '''
-    def __init__(self):
+    def __init__(self, request = None):
+        self._request = request
         self._template_engine = TemplateEngine
 
     def view(self, model = None, template=''):

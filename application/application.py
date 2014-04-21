@@ -1,7 +1,6 @@
-from ..routing.route import Route
-from ..wsgi.interface import Interface
-from wsgiref.simple_server import make_server
-
+from mvc.routing.route import Route
+from mvc.wsgi.interface import Interface
+from mvc.application.testserver import TestServer
 
 class Application(Interface):
     route_map = Route()
@@ -9,8 +8,3 @@ class Application(Interface):
         super().__init__()
         if run_server:
             server = TestServer(self)
-
-class TestServer:
-    def __init__ (self, interface, port=8000):
-        self.server = make_server('localhost', port, interface)
-        self.server.serve_forever()

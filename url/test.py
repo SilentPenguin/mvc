@@ -1,5 +1,5 @@
 import unittest
-from .url import Url
+from mvc.url.url import Url
 
 class urlTestFunctions(unittest.TestCase):
     
