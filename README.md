@@ -3,8 +3,7 @@ mvc
 
 a simple mvc implementation written in and for python3.4
 
-bugs? this is likely to be rife with them. There's doubtlessly performance issues which need ironing out and encoding
-issues. The wsgi interface implementation is rudementory at best.
+bugs? this is likely to be rife with them. There's doubtlessly performanceand encoding issues which need ironing out. The wsgi interface implementation is rudementory at best.
 
 This module currently has a couple of main aspects, templating, routing and modelbinding
 
@@ -31,8 +30,7 @@ That sounds disgusting, "why has this horror been created?" I hear you cry. Simp
             else:
                 <div> nothing?
 
-It has taken me a couple of hours to get used to looking at templates without weird characters like @, %, $ or {}.
-The implicitly closed html tags hasn't helped that.
+It has taken me a couple of hours to get used to looking at templates without weird characters like @, %, $ or {}. The implicitly closed html tags hasn't helped that.
 
 This does have one repercussion, once a line is interpreted as something, part of the line can't be interpreted as something else, so to insert a model value into a body of text that statement needs to appear on a seperate line. After using the template language for a bit, this isn't as bad as it sounds, as it forces you to keep anything you're assigning/printing seperate, but I will likely be modifying this so that lines at the same level without a blank line or html tag between them are compressed into one line.
 
